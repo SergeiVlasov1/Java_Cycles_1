@@ -17,10 +17,10 @@ class SQRServiceTest {
             "from 10 to 99 range 0-10000, 90, 0,10000",
             "from 10 to 99 range -1-1000, 0, -1,-1000"
     })
-    public void rangeNum(String testName, int expected, int lowerLimit, int upperLimit) {
+    public void rangenum(String SQRServiceTest, int expected, int lowerlimit, int upperlimit) {
         SQRService sqrService = new SQRService();
 
-        int actual = sqrService.rangenum(lowerLimit, upperLimit);
+        int actual = sqrService.rangenum(lowerlimit, upperlimit);
 
         assertEquals(actual, expected);
     }
