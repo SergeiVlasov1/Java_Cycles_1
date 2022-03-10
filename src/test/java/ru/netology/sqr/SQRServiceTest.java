@@ -1,6 +1,5 @@
 package ru.netology.sqr;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -17,20 +16,12 @@ class SQRServiceTest {
             "from 10 to 99 range 0-10000, 90, 0,10000",
             "from 10 to 99 range -1-1000, 0, -1,-1000"
     })
-    public void rangenum(String SQRServiceTest, int expected, int lowerlimit, int upperlimit) {
+    public void rangeNum(String sqrServiceTest, int expected, int lowerlimit, int upperLimit) {
         SQRService sqrService = new SQRService();
 
-        int actual = sqrService.rangenum(lowerlimit, upperlimit);
+        int actual = sqrService.rangeNum(lowerlimit, upperLimit);
 
         assertEquals(actual, expected);
     }
- /*   @Test
-    public void rangeNum() {
-        SQRService sqrService = new SQRService();
-        int expected = 5;
-        int lowerLimit = 200;
-        int upperLimit = 300;
-        int actual = sqrService.rangeNum(lowerLimit, upperLimit);
-        assertEquals(actual, expected);
-    } */
+
 }
